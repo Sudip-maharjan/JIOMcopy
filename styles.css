@@ -1444,17 +1444,17 @@ img {
   .pkp_navigation_primary > li > a:hover {
     color: var(--header_text_hover);
   }
-  /* .pkp_navigation_primary > li > a::before {
+  .pkp_navigation_primary > li > a:not(#pkpDropdown0)::before {
     content: "";
     display: block;
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 2px;
+    height: 4px;
     width: 0;
     transition: width 0s ease, background 0.35s ease;
   }
-  .pkp_navigation_primary > li > a::after {
+  .pkp_navigation_primary > li > a:not(#pkpDropdown0)::after {
     content: "";
     display: block;
     position: absolute;
@@ -1465,16 +1465,16 @@ img {
     background: var(--header_text_color);
     transition: width 0.35s ease;
   }
-  .pkp_navigation_primary > li > a:hover::before {
+  .pkp_navigation_primary > li > a:not(#pkpDropdown0):hover::before {
     width: 100%;
     background: var(--header_text_color);
     transition: width 0.35s ease;
   }
-  .pkp_navigation_primary > li > a:hover::after {
+  .pkp_navigation_primary > li > a:not(#pkpDropdown0):hover::after {
     width: 100%;
     background: transparent;
     transition: all 0s ease;
-  } */
+  }
   .pkp_navigation_primary > li > a:focus {
     background: var(--header_link_focus_bg);
     color: var(--header_link_focus_text);
