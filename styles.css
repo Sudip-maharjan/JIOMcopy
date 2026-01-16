@@ -1,4 +1,12 @@
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+:root {
+  --structure_head_bg: #fff;
+  --nav_menu_bg: #fff;
+  --header_text_color: rgba(34, 34, 34, 0.8);
+  --header_text_hover: darken(#000, 20%);
+  --header_link_focus_text: #000;
+  --header_link_focus_bg: #fff;
+}
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -1172,8 +1180,11 @@ img {
   width: auto;
   height: auto;
 }
+
 .pkp_structure_head {
-  background-color: #143c62;
+  background-color: var(
+    --structure_head_bg
+  ); /* not pkp_navigation_primary_wrapper */
   border-bottom: 1px solid #ddd;
 }
 .pkp_head_wrapper {
@@ -1244,7 +1255,7 @@ img {
   position: absolute;
   width: 100%;
   top: 100%;
-  background: #143c62; /* navigation bar background-color*/
+  background: var(--nav_menu_bg);
   left: 0;
   padding: 0.714rem;
   z-index: 9999;
@@ -1259,13 +1270,13 @@ img {
 .pkp_site_nav_menu a {
   display: inline-block;
   padding: 0.125rem 0;
-  color: rgba(255, 255, 255, 1);
+  color: var(--header_text_color);
+  font-weight: 600;
   text-decoration: none;
 }
 .pkp_site_nav_menu a:hover,
 .pkp_site_nav_menu a:focus {
-  color: rgba(0, 0, 0, 0.84);
-  text-decoration: underline;
+  color: var(--header_text_hover);
 }
 .pkp_site_nav_menu #siteNav {
   position: absolute;
@@ -1277,7 +1288,7 @@ img {
   margin-right: auto;
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 1);
 }
 .pkp_navigation_user .task_count {
   display: inline-block;
@@ -1422,22 +1433,51 @@ img {
   .pkp_navigation_primary {
     text-align: center;
   }
+  /*main navigation*/
   .pkp_navigation_primary > li > a {
     margin: 0.357rem 0.5em 0;
     padding: 0.357rem 0.5em calc(0.714rem - 2px);
-    border-bottom: 2px solid transparent;
-    color: rgba(0, 0, 0, 0.84);
+    color: var(--header_text_color);
     text-decoration: none;
+    transition: color 0.35s ease;
   }
   .pkp_navigation_primary > li > a:hover {
-    color: rgba(0, 0, 0, 0.84);
-    outline: 0;
-    border-color: rgba(0, 0, 0, 0.84);
+    color: var(--header_text_hover);
   }
+  /* .pkp_navigation_primary > li > a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    transition: width 0s ease, background 0.35s ease;
+  }
+  .pkp_navigation_primary > li > a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: var(--header_text_color);
+    transition: width 0.35s ease;
+  }
+  .pkp_navigation_primary > li > a:hover::before {
+    width: 100%;
+    background: var(--header_text_color);
+    transition: width 0.35s ease;
+  }
+  .pkp_navigation_primary > li > a:hover::after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+  } */
   .pkp_navigation_primary > li > a:focus {
-    background: rgba(0, 0, 0, 0.84);
-    color: #46a451;
-    outline: 0;
+    background: var(--header_link_focus_bg);
+    color: var(--header_link_focus_text);
   }
   .pkp_navigation_primary > li:first-child a {
     margin-left: -0.5em;
@@ -1499,6 +1539,10 @@ img {
   .pkp_navigation_user li {
     text-align: left;
   }
+  .pkp_navigation_user li:first-child {
+    position: absolute;
+    left: 0;
+  }
   .pkp_navigation_user a {
     padding-top: 0.357rem;
     padding-bottom: 0.357rem;
@@ -1506,8 +1550,8 @@ img {
   }
   .pkp_navigation_user > li > a:focus {
     outline: 0;
-    background: rgba(0, 0, 0, 0.84);
-    color: #46a451;
+    background: var(--header_link_focus_bg);
+    color: var(--header_text_focus_color);
   }
   .pkp_navigation_user ul {
     width: 10em;
@@ -1541,7 +1585,6 @@ img {
   .pkp_navigation_search_wrapper a {
     margin: 0.357rem 0.5em 0;
     padding: 0.357rem 0.5em calc(0.714rem - 2px);
-    border-bottom: 2px solid transparent;
     color: rgba(0, 0, 0, 0.84);
     text-decoration: none;
   }
@@ -1552,8 +1595,8 @@ img {
     text-decoration: none;
   }
   .pkp_navigation_search_wrapper a:focus {
-    background: rgba(0, 0, 0, 0.84);
-    color: #46a451;
+    background: var(--header_link_focus_bg);
+    color: var(--header_text_focus_color);
     outline: 0;
     text-decoration: none;
   }
