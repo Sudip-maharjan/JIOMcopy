@@ -48,7 +48,8 @@ hr {
   overflow: visible;
 }
 pre {
-  font-family: monospace, monospace;
+  /*font-family: monospace, monospace;*/
+  font-family: "Times New Roman", Times, serif;
   font-size: 1em;
 }
 a {
@@ -1208,7 +1209,7 @@ img {
 .pkp_site_name {
   position: absolute;
   left: 2.857rem;
-  right: 0;
+
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0.714rem;
@@ -2985,6 +2986,60 @@ body.navIsOpen .siteHeader__navToggleIcon > span:last-child {
 .obj_article_details .citation_display span {
   margin-right: 0.5em;
 }
+
+/*.cover {
+  box-shadow:
+    rgba(240, 46, 170, 0.4) 5px 5px,
+    rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px,
+    rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}*/
+.cover {
+  margin-left: 30px;
+  position: relative;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Default hidden state */
+.cover::before,
+.cover::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+
+/* Hover main card */
+.cover:hover {
+  transform: skewX(10deg);
+  box-shadow: -15px 15px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Left shadow strip */
+.cover:hover::before {
+  height: 100%;
+  width: 20px;
+  background: #2799d4;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transform: skewY(-45deg) translate(-20px, -10px);
+}
+
+/* Bottom shadow strip */
+.cover:hover::after {
+  width: 100%;
+  height: 20px;
+  background: #d5d5da;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  transform: skewX(-45deg) translate(10px, 20px);
+}
+
 @media (min-width: 480px) {
   .obj_article_details .entry_details {
     margin-left: -2.143rem;
