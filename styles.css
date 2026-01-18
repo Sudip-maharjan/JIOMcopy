@@ -1405,11 +1405,11 @@ img {
   .pkp_nav_list li {
     position: relative;
     display: inline-block;
+    text-align: center;
   }
   .pkp_nav_list a {
-    display: inline-block;
-    padding-left: 0.714rem;
-    padding-right: 0.714rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-decoration: none;
     padding-top: 0.357rem;
     padding-bottom: 0.357rem;
