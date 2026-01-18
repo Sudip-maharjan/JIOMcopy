@@ -1208,8 +1208,7 @@ img {
 }
 .pkp_site_name {
   position: absolute;
-  left: 2.857rem;
-
+  width: 100%;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0.714rem;
