@@ -13,6 +13,11 @@
   --policies_menu_bg_hover: #ddd;
   --policies_menu_border_rad: 3px;
   --policies_menu_item_left_border: #006798;
+  /* font-family */
+  --pre-tag-ff: monospace, monospace;
+  --code-tag-ff: monospace, monospace;
+  --text-area-ff: sans-serif;
+  --body-ff: Lato, sans-serif;
 }
 html {
   line-height: 1.15;
@@ -48,8 +53,8 @@ hr {
   overflow: visible;
 }
 pre {
-  /*font-family: monospace, monospace;*/
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--pre-tag-ff);
+  /* font-family: "Times New Roman", Times, serif; */
   font-size: 1em;
 }
 a {
@@ -72,7 +77,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: var(--code-tag-ff);
   font-size: 1em;
 }
 dfn {
@@ -117,7 +122,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: var(--textarea-ff);
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
@@ -938,7 +943,7 @@ template {
 }
 .cmp_breadcrumbs .current h1 {
   margin: 0;
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 0.93rem;
   font-weight: 400;
 }
@@ -1006,7 +1011,7 @@ template {
 }
 html,
 body {
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 14px;
   line-height: 1.43rem;
   color: rgba(0, 0, 0, 0.87);
@@ -1217,7 +1222,7 @@ img {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: rgba(0, 0, 0, 0.84);
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 0.93rem;
 }
 .pkp_site_name > a {
@@ -1244,7 +1249,7 @@ img {
   height: auto;
 }
 .pkp_site_name .is_text {
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 0.93rem;
   font-weight: 700;
   line-height: 2.857rem;
@@ -1378,7 +1383,7 @@ img {
     overflow: visible;
   }
   .pkp_site_name .is_text {
-    font-family: Lato, sans-serif;
+    font-family: var(--body-ff);
     font-size: 1.714rem;
     line-height: 2.143rem;
   }
@@ -1651,19 +1656,19 @@ img {
   }
 }
 .pkp_structure_main h1 {
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 1.714rem;
   line-height: 2.143rem;
   font-weight: 700;
 }
 .pkp_structure_main h2 {
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 1.285rem;
   line-height: 2.143rem;
   font-weight: 700;
 }
 .pkp_structure_main h3 {
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 1.143rem;
   line-height: 1.43rem;
   font-weight: 700;
@@ -2807,7 +2812,7 @@ body.navIsOpen .siteHeader__navToggleIcon > span:last-child {
 }
 .obj_article_details .main_entry .item .label {
   margin: 0 0 1.43rem;
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 1.143rem;
   font-weight: 700;
 }
@@ -2888,7 +2893,7 @@ body.navIsOpen .siteHeader__navToggleIcon > span:last-child {
 }
 .obj_article_details .entry_details .item .label {
   margin: 0;
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 0.93rem;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.54);
@@ -2926,7 +2931,7 @@ body.navIsOpen .siteHeader__navToggleIcon > span:last-child {
   box-shadow: none;
   padding: 0 1em;
   width: 100%;
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-weight: 400;
   color: rgba(0, 0, 0, 0.54);
   text-align: left;
@@ -3062,7 +3067,7 @@ body.navIsOpen .siteHeader__navToggleIcon > span:last-child {
   }
   .obj_article_details .item .label {
     margin: 0 0 1.43rem;
-    font-family: Lato, sans-serif;
+    font-family: var(--body-ff);
     font-size: 1.143rem;
     font-weight: 700;
   }
@@ -3121,7 +3126,7 @@ body.navIsOpen .siteHeader__navToggleIcon > span:last-child {
   width: auto;
 }
 .obj_article_summary > .title {
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 1rem;
   line-height: 1.43rem;
   font-weight: 700;
@@ -3279,7 +3284,7 @@ body.navIsOpen .siteHeader__navToggleIcon > span:last-child {
   max-height: 250px;
 }
 .obj_issue_summary .title {
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-weight: 700;
   text-decoration: none;
 }
@@ -3437,7 +3442,7 @@ body.navIsOpen .siteHeader__navToggleIcon > span:last-child {
   display: block;
   margin-bottom: 0.714rem;
   margin-top: 0;
-  font-family: Lato, sans-serif;
+  font-family: var(--body-ff);
   font-size: 1.143rem;
   font-weight: 700;
   line-height: 1.43rem;
